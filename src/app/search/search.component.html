@@ -19,7 +19,7 @@
         <div class="column is-4" *ngFor="let pokemon of results">
           <article class="message is-primary">
             <div class="message-body">
-              <p><strong>{{pokemon.name}}</strong></p><br/>
+              <p class="subtitle is-5 has-text-weight-bold">{{pokemon.name}}</p>
               <button [routerLink]="['/pokemon', pokemon.name]" class="button is-small is-primary">Dettaglio</button>
             </div>
           </article>
