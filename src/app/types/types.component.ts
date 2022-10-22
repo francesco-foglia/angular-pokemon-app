@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {PokemonService} from '../services/pokemon.service';
 
 @Component({
   selector: 'app-types',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./types.component.css']
 })
 export class TypesComponent implements OnInit {
+  types: any[];
 
-  constructor() { }
+  constructor(private pokemonService: PokemonService) {
+    this.types = pokemonService.types;
+  }
 
   ngOnInit(): void {
   }
