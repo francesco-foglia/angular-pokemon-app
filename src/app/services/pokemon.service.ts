@@ -11,6 +11,8 @@ export class PokemonService {
 
   constructor(private http: HttpClient) {
     this.query = '';
+    this.types = [];
+    this.pokemons = [];
   }
 
   set query(q: string) {
@@ -51,8 +53,7 @@ export class PokemonService {
   }
 
   getAllTypes() {
-    this.http.get('https://pokeapi.co/api/v2/type?limit=20')
-      .subscribe((response: any) => this.types = response.results);
+    return this.http.get('https://pokeapi.co/api/v2/type?limit=20');
   }
 
   getType(type: string) {

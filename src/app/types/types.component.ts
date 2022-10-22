@@ -10,7 +10,8 @@ export class TypesComponent implements OnInit {
   types: any[];
 
   constructor(private pokemonService: PokemonService) {
-    this.types = pokemonService.types;
+    this.pokemonService.getAllTypes()
+      .subscribe((response: any) => this.types = response.results);
   }
 
   ngOnInit(): void {
