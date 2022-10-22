@@ -7,12 +7,18 @@ import {PokemonService} from '../services/pokemon.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
+  q: string;
   results: any[];
 
   constructor(private pokemonService: PokemonService) {
+    this.q = this.pokemonService.query;
+    if (this.q !== '') {
+      this.submit(this.q);
+    }
   }
 
   submit(query: string): void {
-    this.results = this.pokemonService.pokemons.filter((pokemon: any) => pokemon.name.includes(query.toLowerCase()));
+    this.pokemonService.query = query;
+    this.results = this.pokemonService.getFilteredPokemons(query);
   }
 }

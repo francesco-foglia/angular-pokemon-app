@@ -5,9 +5,32 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class PokemonService {
-  pokemons: any[];
+  private _query: string;
+  private _pokemons: any[];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.query = '';
+  }
+
+  set query(q: string) {
+    this._query = q;
+  }
+
+  get query(): string {
+    return this._query;
+  }
+
+  set pokemons(pokes: any[]) {
+    this._pokemons = pokes;
+  }
+
+  get pokemons(): any[] {
+    return this._pokemons;
+  }
+
+  getFilteredPokemons(name) {
+    return this.pokemons.filter((pokemon: any) => pokemon.name.includes(name.toLowerCase()));
+  }
 
   getPokemon(name: string) {
     return this.http.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
