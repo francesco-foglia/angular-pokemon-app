@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {PokemonService} from '../services/pokemon.service';
+import { PokemonService } from '../services/pokemon.service';
 
 @Component({
   selector: 'app-search',
@@ -8,7 +8,7 @@ import {PokemonService} from '../services/pokemon.service';
 })
 export class SearchComponent {
   q: string;
-  results: any[];
+  results!: any[];
 
   constructor(private pokemonService: PokemonService) {
     this.q = this.pokemonService.query;

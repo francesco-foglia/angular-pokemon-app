@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PokemonService {
-  private _query: string;
-  private _pokemons: any[];
-  private _types: any[];
+  private _query!: string;
+  private _pokemons!: any[];
+  private _types!: any[];
 
   constructor(private http: HttpClient) {
     this.query = '';
@@ -39,7 +39,7 @@ export class PokemonService {
     return this._pokemons;
   }
 
-  getFilteredPokemons(name) {
+  getFilteredPokemons(name: any) {
     return this.pokemons.filter((pokemon: any) => pokemon.name.includes(name.toLowerCase()));
   }
 
