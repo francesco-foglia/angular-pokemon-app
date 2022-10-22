@@ -1,3 +1,25 @@
 <div class="section">
-  <p>pokemon works!</p>
+  <h2 class="subtitle is-4">Pokemon detail</h2>
+
+  <article class="message is-primary">
+    <div class="message-body">
+      <div class="columns">
+        <div class="column is-3">
+          <figure class="image">
+            <img [src]="detail.sprites" style="width: auto; height: 200px;">
+          </figure>
+        </div>
+        <div class="column">
+          <p class="subtitle is-5 has-text-weight-bold">{{detail.name.toUpperCase()}}</p>
+          <small class="has-text-weight-bold">Informazioni</small>
+          <p class="has-text-weight-light">Height: {{detail.height}}</p>
+          <p class="has-text-weight-light">Weight: {{detail.weight}}</p><br>
+          <small class="has-text-weight-bold">Statistiche</small>
+          <p class="has-text-weight-light" *ngFor="let stat of detail.stats">
+            {{stat.stat.name}}: {{stat.base_stat}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
 </div>
