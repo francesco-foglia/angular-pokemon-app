@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  results: any[];
+  mostSearched: any[];
 
   constructor() {
-    this.results = [
+    this.mostSearched = [
       {name: 'bulbasaur', url: 'https://pokeapi.co/api/v2/pokemon/1/'},
       {name: 'charmander', url: 'https://pokeapi.co/api/v2/pokemon/4/'},
       {name: 'squirtle', url: 'https://pokeapi.co/api/v2/pokemon/7/'},
