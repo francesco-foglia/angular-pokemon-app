@@ -1,3 +1,42 @@
-<h1 class="title">Pokemon App</h1>
+<div class="container">
+  <div class="section">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a [routerLink]="['/home']" class="navbar-item">
+          <h1 class="title is-5">Pokemon App</h1>
+        </a>
 
-<router-outlet></router-outlet>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="myNavbar">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="myNavbar" class="navbar-menu">
+        <div class="navbar-start">
+          <a [routerLink]="['/home']" class="navbar-item">
+            Home
+          </a>
+
+          <a [routerLink]="['/search']"class="navbar-item">
+            Search
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-light">
+                Log in
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
