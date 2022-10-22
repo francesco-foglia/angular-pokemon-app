@@ -30,7 +30,7 @@
               <a *ngIf="!authService.isLoggedIn()" [routerLink]="['/login']" class="button is-light">
                 Log in
               </a>
-              <a *ngIf="authService.isLoggedIn()" class="button is-light" (click)="authService.logout()">
+              <a *ngIf="authService.isLoggedIn()" class="button is-light" (click)="logout()">
                 Logout
               </a>
             </div>

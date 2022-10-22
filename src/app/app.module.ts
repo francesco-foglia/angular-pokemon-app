@@ -9,6 +9,7 @@ import { PokemonComponent } from './pokemon/pokemon.component';
 import {PokemonService} from './services/pokemon.service';
 import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
+import {LoggedInGuard} from './logged-in.guard';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { LoginComponent } from './login/login.component';
   ],
   providers: [
     PokemonService,
+    LoggedInGuard,
   ],
   bootstrap: [AppComponent]
 })
