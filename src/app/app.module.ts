@@ -8,6 +8,7 @@ import { SearchComponent } from './search/search.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
 import {PokemonService} from './services/pokemon.service';
 import {HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {HttpClientModule} from '@angular/common/http';
     HomeComponent,
     SearchComponent,
     PokemonComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
