@@ -5,12 +5,14 @@ import {SearchComponent} from './search/search.component';
 import {PokemonComponent} from './pokemon/pokemon.component';
 import {LoginComponent} from './login/login.component';
 import {LoggedInGuard} from './logged-in.guard';
+import {TypeComponent} from './type/type.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent, canActivate: [LoggedInGuard] },
   { path: 'search', component: SearchComponent, canActivate: [LoggedInGuard] },
+  { path: 'types', component: TypeComponent, canActivate: [LoggedInGuard] },
   { path: 'pokemon/:name', component: PokemonComponent, canActivate: [LoggedInGuard] },
 ];
 

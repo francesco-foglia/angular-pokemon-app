@@ -7,6 +7,7 @@ import {HttpClient} from '@angular/common/http';
 export class PokemonService {
   private _query: string;
   private _pokemons: any[];
+  private _types: any[];
 
   constructor(private http: HttpClient) {
     this.query = '';
@@ -18,6 +19,14 @@ export class PokemonService {
 
   get query(): string {
     return this._query;
+  }
+
+  set types(newTypes: any[]) {
+    this._types = newTypes;
+  }
+
+  get types(): any[] {
+    return this._types;
   }
 
   set pokemons(pokes: any[]) {
@@ -39,5 +48,10 @@ export class PokemonService {
   findAll() {
     this.http.get(`https://pokeapi.co/api/v2/pokemon?limit=1000`)
       .subscribe((response: any) => this.pokemons = response.results);
+  }
+
+  getAllTypes() {
+    this.http.get('https://pokeapi.co/api/v2/type?limit=20')
+      .subscribe((response: any) => this.types = response.results);
   }
 }

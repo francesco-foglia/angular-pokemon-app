@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.pokemonService.findAll();
+    this.pokemonService.getAllTypes();
   }
 
   logout() {
