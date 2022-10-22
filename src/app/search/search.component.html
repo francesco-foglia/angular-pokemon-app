@@ -3,10 +3,18 @@
 
   <div class="field has-addons">
     <div class="control is-expanded">
-      <input class="input" type="text" placeholder="es. bulbasaur" #query>
+      <input
+        class="input"
+        type="text"
+        placeholder="es. bulbasaur"
+        (keydown.enter)="submit(query.value)"
+        #query>
     </div>
     <div class="control">
-      <button type="submit" class="button is-dark">Submit</button>
+      <button
+        type="submit"
+        class="button is-dark"
+        (click)="submit(query.value)">Submit</button>
     </div>
   </div>
 
