@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {PokemonService} from '../services/pokemon.service';
 
 @Component({
   selector: 'app-search',
@@ -7,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
   results: any[];
-  allPokemons: any[];
 
-  constructor() {
+  constructor(private pokemonService: PokemonService) {
     this.results = [
       {name: 'bulbasaur', url: 'https://pokeapi.co/api/v2/pokemon/1/'},
       {name: 'ivysaur', url: 'https://pokeapi.co/api/v2/pokemon/2/'},
