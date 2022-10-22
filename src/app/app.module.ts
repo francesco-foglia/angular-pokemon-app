@@ -11,6 +11,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import {LoggedInGuard} from './logged-in.guard';
 import { TypeComponent } from './type/type.component';
+import { TypesComponent } from './types/types.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { TypeComponent } from './type/type.component';
     PokemonComponent,
     LoginComponent,
     TypeComponent,
+    TypesComponent,
   ],
   imports: [
     BrowserModule,
