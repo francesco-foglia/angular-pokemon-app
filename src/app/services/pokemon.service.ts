@@ -54,4 +54,8 @@ export class PokemonService {
     this.http.get('https://pokeapi.co/api/v2/type?limit=20')
       .subscribe((response: any) => this.types = response.results);
   }
+
+  getType(type: string) {
+    return this.http.get(`https://pokeapi.co/api/v2/type/${type}`);
+  }
 }
