@@ -1,8 +1,8 @@
-<div class="section">
+<div class="section px-3 pb-0">
   <div class="field">
     <label class="label">Username (<strong>user</strong>)</label>
     <div class="control">
-      <input type="text" class="input" placeholder="es. user" #user>
+      <input type="text" class="input" placeholder="e.g. user" #user>
     </div>
   </div>
 
@@ -13,5 +13,5 @@
     </div>
   </div>
 
-  <button class="button is-dark is-outlined" (click)="login(user.value, password.value)">Log In</button>
+  <button class="button is-link is-outlined" (click)="login(user.value, password.value)">Log In</button>
 </div>

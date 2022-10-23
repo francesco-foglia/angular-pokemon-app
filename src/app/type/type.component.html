@@ -1,13 +1,13 @@
-<div class="section">
-  <h2 class="subtitle is-4">Pokemon filtered by type {{type}}</h2>
+<div class="section px-3 pb-0">
+  <h2 class="subtitle is-4">Pokemon filtered by type <strong class="is-capitalized">{{type}}</strong></h2>
 
-  <div style="margin-top: 40px;">
+  <div class="mt-5">
     <div class="columns is-multiline">
       <div class="column is-4" *ngFor="let item of pokemonByType">
-        <article class="message is-dark">
+        <article class="message is-warning">
           <div class="message-body">
-            <p class="subtitle is-5 has-text-weight-bold">{{item.pokemon.name}}</p>
-            <button [routerLink]="['/pokemon', item.pokemon.name]" class="button is-small is-primary">Dettaglio</button>
+            <p class="subtitle is-5 has-text-weight-bold is-capitalized">{{item.pokemon.name}}</p>
+            <button [routerLink]="['/pokemon', item.pokemon.name]" class="button is-small is-warning">Detail</button>
           </div>
         </article>
       </div>

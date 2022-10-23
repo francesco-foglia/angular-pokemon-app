@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+h1 {
+  color: #FFE08A !important;
+  text-shadow: 2px 0 #485FC7, -2px 0 #485FC7, 0 2px #485FC7, 0 -2px #485FC7,
+    1px 1px #485FC7, -1px -1px #485FC7, 1px -1px #485FC7, -1px 1px #485FC7;
+}
+
+.navbar-burger {
+  background: #FFFAEB !important;
+  color: #485FC7 !important;
+}
+
+.navbar-burger span {
+  height: 2.5px;
+}
+
+.navbar-menu {
+  max-width: 99%;
+  margin: 0 auto;
+}
+
+img {
+  width: auto !important;
+  height: 200px !important;
+}

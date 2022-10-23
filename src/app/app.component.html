@@ -1,9 +1,9 @@
 <div class="container">
-  <div class="section">
+  <div class="py-5 px-2">
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a [routerLink]="['/home']" class="navbar-item">
-          <h1 class="title is-5">Pokemon App</h1>
+          <h1 class="title is-4">Pokemon App</h1>
         </a>
 
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="myNavbar">
@@ -19,11 +19,11 @@
             Home
           </a>
 
-          <a [routerLink]="['/types']"class="navbar-item">
+          <a [routerLink]="['/types']" class="navbar-item">
             Types
           </a>
 
-          <a [routerLink]="['/search']"class="navbar-item">
+          <a [routerLink]="['/search']" class="navbar-item">
             Search
           </a>
         </div>
@@ -31,10 +31,10 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a *ngIf="!authService.isLoggedIn()" [routerLink]="['/login']" class="button is-light">
+              <a *ngIf="!authService.isLoggedIn()" [routerLink]="['/login']" class="button is-link is-outlined">
                 Log in
               </a>
-              <a *ngIf="authService.isLoggedIn()" class="button is-light" (click)="logout()">
+              <a *ngIf="authService.isLoggedIn()" class="button is-link is-outlined" (click)="logout()">
                 Logout
               </a>
             </div>
@@ -46,4 +46,3 @@
     <router-outlet></router-outlet>
   </div>
 </div>
-

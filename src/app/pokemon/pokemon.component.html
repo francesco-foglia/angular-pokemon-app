@@ -1,20 +1,20 @@
-<div class="section">
+<div class="section px-3 pb-0">
   <h2 class="subtitle is-4">Pokemon detail</h2>
 
-  <article class="message is-primary" *ngIf="detail">
+  <article class="message is-warning" *ngIf="detail">
     <div class="message-body">
       <div class="columns">
-        <div class="column is-3">
+        <div class="column is-6">
           <figure class="image">
-            <img [src]="detail.sprites" style="width: auto; height: 200px;">
+            <img [src]="detail.sprites">
           </figure>
         </div>
         <div class="column">
-          <p class="subtitle is-5 has-text-weight-bold">{{name.toUpperCase()}}</p>
-          <small class="has-text-weight-bold">Informazioni</small>
+          <p class="subtitle is-5 has-text-weight-bold is-capitalized">{{name.toUpperCase()}}</p>
+          <small class="has-text-weight-bold">Info</small>
           <p class="has-text-weight-light">Height: {{detail.height}}</p>
           <p class="has-text-weight-light">Weight: {{detail.weight}}</p><br>
-          <small class="has-text-weight-bold">Statistiche</small>
+          <small class="has-text-weight-bold">Stats</small>
           <p class="has-text-weight-light" *ngFor="let stat of detail.stats">
             {{stat.stat.name}}: {{stat.base_stat}}
           </p>
