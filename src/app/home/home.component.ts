@@ -10,10 +10,10 @@ export class HomeComponent implements OnInit {
 
   constructor() {
     this.mostSearched = [
-      {name: 'bulbasaur', url: 'https://pokeapi.co/api/v2/pokemon/1/'},
-      {name: 'charmander', url: 'https://pokeapi.co/api/v2/pokemon/4/'},
-      {name: 'squirtle', url: 'https://pokeapi.co/api/v2/pokemon/7/'},
-      {name: 'pidgey', url: 'https://pokeapi.co/api/v2/pokemon/16/'}
+      { name: 'squirtle', url: 'https://pokeapi.co/api/v2/pokemon/7/' },
+      { name: 'bulbasaur', url: 'https://pokeapi.co/api/v2/pokemon/1/' },
+      { name: 'charmander', url: 'https://pokeapi.co/api/v2/pokemon/4/' },
+      { name: 'pikachu', url: 'https://pokeapi.co/api/v2/pokemon/25/' }
     ];
   }
 

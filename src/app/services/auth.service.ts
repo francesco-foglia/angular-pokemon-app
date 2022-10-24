@@ -16,7 +16,7 @@ export class AuthService {
   }
 
   login(username: string, password: string): boolean {
-    if (username === 'user' && password === 'password') {
+    if (username === 'username' && password === 'password') {
       localStorage.setItem('username', username);
       return true;
     }

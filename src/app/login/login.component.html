@@ -1,17 +1,17 @@
 <div class="section px-3 pb-0">
   <div class="field">
-    <label class="label">Username (<strong>user</strong>)</label>
+    <label class="label">Username (<strong>username</strong>)</label>
     <div class="control">
-      <input type="text" class="input" placeholder="e.g. user" #user>
+      <input type="text" class="input is-large" placeholder='The username is "username" :-)' #username>
     </div>
   </div>
 
   <div class="field">
     <label class="label">Password (<strong>password</strong>)</label>
     <div class="control">
-      <input type="password" class="input" #password>
+      <input type="password" class="input is-large" placeholder='The password is "password" :-)' #password>
     </div>
   </div>
 
-  <button class="button is-link is-outlined" (click)="login(user.value, password.value)">Log In</button>
+  <button class="button is-link is-outlined" (click)="login(username.value, password.value)">Log In</button>
 </div>
